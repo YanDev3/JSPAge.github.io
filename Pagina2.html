@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esta pagina es un formulario de inicio de sesión">
+  <meta name="keywords" content="Paginas, Web, Tecnologias, Programacion, Desarrollo, Lenguaje, Librerias, Historia, Actualizaciones, Javascript">
+  <meta name="author" content="Yaniel De La Rosa">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="icon" href="Favicon.png" type="image/x-png">
+  <link rel="stylesheet" href="Estilo_pagina_principal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <title>JavaScript</title>
+</head>
+<body>
+
+  <div class="header">  
+    <div class="header__logo">
+        <a href="Pagina_principal.html"><img src="Favicon.png" alt="LOGO"></a>
+    </div>
+      <nav class="navbar">
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="Pagina1.html" class="navbar__link"></i><span>Versiones</span></a>        
+          </li>
+          <li class="navbar__item">
+            <a href="Pagina2.html" class="navbar__link"></i><span>Librerias</span></a>        
+          </li>
+          <li class="navbar__item">
+            <a href="Pagina3.html" class="navbar__link"></i><span>Creador</span></a>        
+          </li>
+          <li class="navbar__item">
+            <a href="Pagina4.html" class="navbar__link"></i><span>Otros</span></a>        
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+<p id="fechaHora"></p>
+
+<hr color="white">
+
+<script>
+  function actualizarFechaHora() {
+    var fechaHoraActual = new Date();
+    var fecha = fechaHoraActual.toLocaleDateString('es-ES', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-');
+    var hora = fechaHoraActual.toLocaleTimeString('es-ES', { hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    var fechaHoraElemento = document.getElementById('fechaHora');
+    fechaHoraElemento.textContent = fecha + ' ' +  hora;
+  }
+  setInterval(actualizarFechaHora, 1000);
+  actualizarFechaHora();
+</script>
+
+<h1 class="cont12">Librerías de JavaScript.</h1>
+
+<dl class="lista">
+  <dt>jQuery</dt>
+  <dd>Biblioteca de JavaScript multiplataforma que simplifica la manipulación del DOM y el manejo de eventos.</dd>
+
+  <dt>React</dt>
+  <dd>Biblioteca de JavaScript para construir interfaces de usuario interactivas y componentes reutilizables.</dd>
+
+  <dt>Vue.js</dt>
+  <dd>Framework progresivo de JavaScript para la creación de interfaces de usuario.</dd>
+
+  <dt>Angular</dt>
+  <dd>Framework de JavaScript desarrollado por Google para la creación de aplicaciones web de una sola página.</dd>
+
+  <dt>Express.js</dt>
+  <dd>Framework de aplicaciones web para Node.js, diseñado para crear API RESTful y servidores web.</dd>
+</dl>
+
+<div class="carousel">
+  <div class="carousel-inner">
+    <img src="Jquery.png" class="slide active">
+    <img src="React.png" class="slide">
+    <img src="Vue.jpg" class="slide">
+    <img src="Angular.png" class="slide">
+    <img src="Express.png" class="slide">
+  </div>
+  <button class="prev-btn">Prev</button>
+  <button class="next-btn">Next</button>
+</div>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+  const carouselInner = document.querySelector(".carousel-inner");
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    carouselInner.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  document.querySelector(".next-btn").addEventListener("click", nextSlide);
+  document.querySelector(".prev-btn").addEventListener("click", prevSlide);
+});
+
+</script>
+
+
+
+
+  <footer class="footer">
+    <p>Copyright (c) 2024 | www.javascript.com | <a href="https://www.instagram.com/yan.dlrs/" target="_blank">Instagram,</a> 
+    <a href="https://www.facebook.com/profile.php?id=100093148823195" target="_blank">Facebook,</a>
+    <a href="mailto:yanieldelarosa12@gmail.com.com">Email.</a></p>
+  </footer>
+
+</body>
+</html>

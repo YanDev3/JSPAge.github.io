@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esta pagina es un formulario de inicio de sesión">
+  <meta name="keywords" content="Paginas, Web, Tecnologias, Programacion, Desarrollo, Lenguaje, Librerias, Historia, Actualizaciones, Javascript">
+  <meta name="author" content="Yaniel De La Rosa">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="icon" href="Favicon.png" type="image/x-png">
+  <link rel="stylesheet" href="Estilo_pagina_principal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <title>JavaScript</title>
+</head>
+<body>
+
+  <div class="header">  
+    <div class="header__logo">
+        <a href="Pagina_principal.html"><img src="Favicon.png" alt="LOGO"></a>
+    </div>
+      <nav class="navbar">
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="Pagina1.html" class="navbar__link"></i><span>Versiones</span></a>        
+          </li>
+          <li class="navbar__item">
+            <a href="Pagina2.html" class="navbar__link"></i><span>Librerias</span></a>        
+          </li>
+          <li class="navbar__item">
+            <a href="Pagina3.html" class="navbar__link"></i><span>Creador</span></a>        
+          </li>
+          <li class="navbar__item">
+            <a href="Pagina4.html" class="navbar__link"></i><span>Otros</span></a>        
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+<p id="fechaHora"></p>
+
+<hr color="white">
+
+<script>
+  function actualizarFechaHora() {
+    var fechaHoraActual = new Date();
+    var fecha = fechaHoraActual.toLocaleDateString('es-ES', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-');
+    var hora = fechaHoraActual.toLocaleTimeString('es-ES', { hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    var fechaHoraElemento = document.getElementById('fechaHora');
+    fechaHoraElemento.textContent = fecha + ' ' +  hora;
+  }
+  setInterval(actualizarFechaHora, 1000);
+  actualizarFechaHora();
+</script>
+
+<h1 class="cont9">Biografia del creador de Javascript.</h1>
+<p class="cont10">Eich, nacido el 4 de julio de 1961 en Pittsburgh, Pensilvania, es un programador informático estadounidense <br>
+conocido por ser el creador del lenguaje de programación JavaScript. Eich se graduó en la Universidad de Santa Clara <br>
+en 1983 con un título en Matemáticas y Ciencias de la Computación. Su contribución más destacada se produjo en 1995, <br>
+cuando trabajaba en Netscape Communications Corporation, donde desarrolló JavaScript en un período de 10 días.
+<br> <br>
+El propósito de JavaScript era brindar interactividad a las páginas web, permitiendo a los desarrolladores manipular <br>
+el contenido de la página de forma dinámica y responder a las acciones del usuario. Inspirado en lenguajes como Scheme, <br>
+Java, Self y Perl, JavaScript rápidamente se convirtió en un componente esencial del desarrollo web y en una piedra <br>
+angular de la web moderna.
+<br> <br>
+A lo largo de su carrera, Eich ha continuado siendo un defensor de la innovación tecnológica y ha participado activamente <br>
+en la comunidad de desarrollo de software. Su legado como creador de JavaScript ha dejado una huella indeleble en el mundo <br>
+de la informática y ha transformado la forma en que interactuamos con la web.</p>
+
+<p class="frase">
+"Siempre codifica como si la persona que finalmente mantendrá tu código fuera un psicópata violento que sabe dónde vives."
+</p>
+
+<div class="mapa-img">
+<img src="Brendan1.jpg" alt="Mapa" usemap="#mapa">
+<img src="Brendan2.jpg" alt="Mapa" usemap="#mapa">
+<img src="Brendan3.jpg" alt="Mapa" usemap="#mapa">
+</div>
+
+<map name="mapa">
+  <area shape="rect" coords="0,0,100,100" href="https://upload.wikimedia.org/wikipedia/commons/d/d1/Brendan_Eich_Mozilla_Foundation_official_photo.jpg" target="_blank" alt="Área 1">
+  <area shape="circle" coords="200,200,50" href="https://www.um.es/docencia/barzana/DIVULGACION/IMG/Brendan-Eich.jpg" target="_blank" alt="Área 2">
+  <area shape="poly" coords="300,300,400,400,500,300" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr6FWGMCZsw4Np-2WOO6GUoF-TUnodjRAF6c3-NYTvNQ&s" target="_blank" alt="Área 3">
+
+  <footer class="footer">
+    <p>Copyright (c) 2024 | www.javascript.com | <a href="https://www.instagram.com/yan.dlrs/" target="_blank">Instagram,</a> 
+    <a href="https://www.facebook.com/profile.php?id=100093148823195" target="_blank">Facebook,</a>
+    <a href="mailto:yanieldelarosa12@gmail.com.com">Email.</a></p>
+  </footer>
+
+</body>
+</html>

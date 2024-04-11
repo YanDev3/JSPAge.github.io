@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esta pagina es un formulario de inicio de sesión">
+  <meta name="keywords" content="Paginas, Web, Tecnologias, Programacion, Desarrollo, Lenguaje, Librerias, Historia, Actualizaciones, Javascript">
+  <meta name="author" content="Yaniel De La Rosa">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="Favicon.png" type="image/x-png">
+  <link rel="stylesheet" href="Estilo_formulario.css">
+  <title>Formulario | Registro</title>
+</head>
+<body>
+
+<div class="contenedor">
+  <h2>Registrate</h2>
+
+  <form>
+
+    <div class="usuario">
+      <input type="text" name="nombre" required oninvalid="this.setCustomValidity('Es obligatorio que introduzca su nombre.')" oninput="setCustomValidity('')">
+      <label>Nombre</label>
+    </div>
+
+    <div class="usuario">
+      <input type="email" name="correo" required oninvalid="this.setCustomValidity('Es obligatorio que introduzca su correo electronico (y asegurese de que este bien escrito).')" oninput="setCustomValidity('')">
+      <label>Correo Electronico</label>
+    </div>
+
+    <div class="usuario">
+      <input type="password" name="contraseña" required oninvalid="this.setCustomValidity('Es obligatorio que introduzca su contraseña.')" oninput="setCustomValidity('')">
+      <label>Contraseña</label>
+    </div>
+
+    <div class="usuario">
+      <input type="number" name="edad" required min="1" max="99" oninvalid="this.setCustomValidity('Debes rellenar este campo obligatorio (sea honesto por favor).')" oninput="setCustomValidity('')">
+      <label>Edad</label>
+    </div>
+
+    <div class="genero">
+      <label>Selecciona Tu Genero:</label><br>
+      <input type="radio" id="masculino" name="genero" value="masculino">
+      <label for="masculino" class="radio-label">Masculino</label><br>
+      <input type="radio" id="femenino" name="genero" value="femenino">
+      <label for="femenino" class="radio-label">Femenino</label><br>
+    </div>
+
+    <a href="Pagina_principal.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Ingresar
+    </a>
+
+  </form>
+</div>
+
+</body>
+</html>

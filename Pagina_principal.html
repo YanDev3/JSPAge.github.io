@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esta pagina es un formulario de inicio de sesión">
+  <meta name="keywords" content="Paginas, Web, Tecnologias, Programacion, Desarrollo, Lenguaje, Librerias, Historia, Actualizaciones, Javascript">
+  <meta name="author" content="Yaniel De La Rosa">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="icon" href="Favicon.png" type="image/x-png">
+  <link rel="stylesheet" href="Estilo_pagina_principal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <title>JavaScript</title>
+</head>
+<body>
+
+<div class="header">  
+<div class="header__logo">
+    <a href="Pagina_principal.html"><img src="Favicon.png" alt="LOGO"></a>
+</div>
+  <nav class="navbar">
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="Pagina1.html" class="navbar__link"></i><span>Versiones</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="Pagina2.html" class="navbar__link"></i><span>Librerias</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="Pagina3.html" class="navbar__link"></i><span>Creador</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="Pagina4.html" class="navbar__link"></i><span>Otros</span></a>        
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<p id="fechaHora"></p>
+
+<hr color="white">
+
+<script>
+  function actualizarFechaHora() {
+    var fechaHoraActual = new Date();
+    var fecha = fechaHoraActual.toLocaleDateString('es-ES', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-');
+    var hora = fechaHoraActual.toLocaleTimeString('es-ES', { hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    var fechaHoraElemento = document.getElementById('fechaHora');
+    fechaHoraElemento.textContent = fecha + ' ' +  hora;
+  }
+  setInterval(actualizarFechaHora, 1000);
+  actualizarFechaHora();
+</script>
+
+<h3 class="ancla"><a href="#ancla" class="ancla1">-Ir a las listas</a></h3>
+
+<h1 class="cont1"> Introduccion a <strong>JavaScript.</strong></h1>
+
+<h2 class="cont2">¿Que es Javascript?</h2>
+<p class="cont3">
+JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos, ampliamente <br>
+utilizado en el desarrollo web. Fue creado por Brendan Eich en 1995 mientras trabajaba en Netscape <br>
+Communications Corporation. Originalmente, se diseñó para agregar interactividad a las páginas web, <br>
+permitiendo a los desarrolladores modificar el contenido de la página de forma dinámica y responder <br>
+a las acciones del usuario. JavaScript se ejecuta en el navegador web del usuario y se utiliza para <br>
+mejorar la experiencia del usuario mediante la manipulación del Document Object Model (DOM), la <br>
+validación de formularios, el manejo de eventos, la creación de animaciones y efectos visuales, <br>
+la comunicación con el servidor a través de solicitudes HTTP asíncronas (AJAX), entre otras <br>
+funcionalidades. Es un componente fundamental en el desarrollo de aplicaciones web modernas <br>
+y su popularidad ha crecido enormemente a lo largo de los años.</p>
+
+<h2 class="cont4">¿Por que fue creado Javascript?<h2>
+<p class="cont5">JavaScript fue concebido como una solución para la estática naturaleza de las <br>
+páginas web en sus inicios. Antes de su introducción, las páginas web eran estáticas y poco interactivas, con <br>
+contenido estático que no cambiaba sin recargar la página. Con JavaScript, los desarrolladores <br>
+obtuvieron la capacidad de agregar comportamientos dinámicos a sus páginas, como validación <br>
+de formularios, efectos visuales, actualización de contenido en tiempo real y más. Esto <br>
+permitió una experiencia de usuario más rica y atractiva, y allanó el camino para el <br>
+desarrollo de aplicaciones web cada vez más sofisticadas. En resumen, JavaScript fue <br>
+creado para hacer que las páginas web fueran más dinámicas e interactivas, transformando <br>
+la forma en que interactuamos con la web.</p>
+
+<h2 class="cont6">¿Cuales funciones puede hacer Javascript?</h2>
+<p class="cont7"  id="ancla">
+JavaScript puede realizar una variedad de funciones en una página web, incluyendo la manipulación del DOM para <br>
+actualizar el contenido en tiempo real, el manejo de eventos para responder a las acciones del usuario, la <br>
+validación de formularios antes de enviar datos al servidor, la creación de animaciones y efectos visuales <br>
+para mejorar la experiencia del usuario, la comunicación con el servidor mediante solicitudes asíncronas, <br>
+el almacenamiento local de datos en el navegador y la creación dinámica de elementos HTML. Estas capacidades <br>
+hacen de JavaScript una herramienta fundamental en el desarrollo web, permitiendo la creación de aplicaciones <br>
+interactivas y dinámicas.</p>
+
+<ol class="cont8">
+<li>1- Manipulación del DOM (Document Object Model)</li>
+<li>2- Manejo de eventos</li>
+<li>3- Validación de formularios</li>
+<li>4- Animaciones y efectos visuales</li>
+<li>5- Comunicación con el servidor</li>
+<li>6- Almacenamiento local</li>
+<li>7- Creación de elementos dinámicos</li>
+</ol>
+
+<video width="640" height="360" controls>
+  <source src="Javascript_video.mp4" type="video/mp4">
+  Tu navegador no soporta el elemento de video.
+</video>
+
+<footer class="footer">
+  <p>Copyright (c) 2024 | www.javascript.com | <a href="https://www.instagram.com/yan.dlrs/" target="_blank">Instagram,</a> 
+  <a href="https://www.facebook.com/profile.php?id=100093148823195" target="_blank">Facebook,</a>
+  <a href="mailto:yanieldelarosa12@gmail.com.com">Email.</a></p>
+</footer>
+
+</body>
+</html>
